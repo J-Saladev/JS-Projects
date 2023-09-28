@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h1 class="text-center">Task Manager</h1>
+      </div>
+      <div class="col-2">
+        <h5>Hey, <span id="name"></span>!</h5>
+        <small
+          id="logout"
+          class="text-end"
+          onclick="logout()"
+          style="cursor: pointer"
+          >logout?</small
+        >
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-2">
+        <h4 class="text-center"><span id="taskstatus"></span>Tasks</h4>
+        <hr />
+        <div id="tasklist">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+
+            <tbody id="tabletasks"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-8">
+        <h4 class="text-center">Add Task</h4>
+        <hr />
+        <form id="form" class="form horizontal form-control bg-light">
+          <div class="form-control mt-3">
+            <label for="task">Task</label>
+            <input type="text" class="form-control w-50" id="task" />
+            <button
+              type="button"
+              class="btn btn-primary mt-3"
+              onclick="addTask()"
+            >
+              Add Task
+            </button>
+            <button
+              type="button"
+              class="btn btn-success mt-3"
+              onclick="displayTasks()"
+              id="showall"
+              hidden
+            >
+              Show All
+            </button>
+            <hr />
+            <div class="text-center">
+              <button
+                type="button"
+                class="btn btn-success mb-2"
+                onclick="showRequest(true)"
+                id="showcomplete"
+              >
+                Show Complete
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger mb-2"
+                onclick="showRequest(false)"
+                id="showincomplete"
+              >
+                Show Incomplete
+              </button>
+              <button
+                type="button"
+                class="btn btn-warning mb-2"
+                onclick="deleteComplete()"
+                id="deleteall"
+              >
+                Delete All Completed
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="tasks.js"></script>
+  </body>
+</html>

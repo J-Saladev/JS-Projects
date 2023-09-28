@@ -1,0 +1,8 @@
+This project was really fun and I really felt as if it tested the limits of my understanding of Javascript.
+It forced me to get way better at accessing local storage and making my code simpler and easier to understand. 
+Personally I think my design skills could be a lot better, but I really wanted to just demonstrate my JS in this project.
+Other than that I think I need to work on the redundancy of my code, and figuring out simpler ways to do what I am trying to do.
+I am personally proud as the webpage works completely as intended, maybe even better than I had in mind originally!
+If I did a project like this again I would definitely think a lot of it out further in advance, like how I originally tried to assign a variable
+to the user depending on if they were logged in and the tasks they had. I would also write a lot less notes on each of the functions
+I tend to overexplain and I think it can make it take longer than it needs to.
