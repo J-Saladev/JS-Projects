@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-3">
+                <h1>Recipe List</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container " style="height: 100vh;">
+        <form id="formrecipe" class="rounded border border-primary h-75">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <label class="form-label mt-3" for="name">Recipe Name</label>
+                <input class="form-control" type="text" placeholder="Enter Recipe name" id="name">
+            </div>
+        </div>
+        <div class="row h-50">
+            
+            <div class="col-1"></div>
+           
+            <div class="col-5">
+                <label class="form-label mt-3" for="recipinstruct">Instructions</label>
+                <textarea class="form-control h-100 w-100" id="recipinstruct"></textarea>
+            </div>
+            <div class="col-5">
+                <label class="form-label mt-3" for="recipeimg">Recipe Picture</label>
+                <div id="recipeimg" class="text-center h-100 w-100 rounded border border-gray"></div>
+            </div>
+
+        </div>
+        <div class="row mt-3">
+            <div class="col-1"></div>
+            <div class="col-5">
+                <label class="form-label mt-5" for="cooktime">Cook Time</label>
+                <input class="form-control" type="number" placeholder="Enter Cook Time (Minutes)" id="cooktime">
+
+            </div>
+            <div class="col-5">
+                <label class="form-label mt-5" for="servings">Servings</label>
+                <input class="form-control" type="file" id="imginput">
+            </div>
+        
+        </div>
+        <div class="row mt-3">
+            <div class="col-1"></div>
+            <div class="col-6">
+                <button class="btn btn-success" onclick="addRecipe(event)" type="submit">Add Recipe</button>
+                <button class="btn btn-danger" onclick="window.location.reload()" type="button">Clear Recipe</button> 
+            </div>
+            <div class="col-4 text-end">
+                <button class="btn btn-border border-success text-success" onclick="document.getElementById('tablerecipe').hidden = false" type="button">Show All</button>
+            </div>
+
+        </div>
+        </form>
+        <table class="table table-hover mt-3 rounded table-striped" id="tablerecipe" >
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Recipe Name</th>
+                    <th scope="col">Instructions</th>
+                    <th scope="col">Cook Time</th>
+                    <th scope="col">Image</th>
+                </tr>
+            </thead>
+            <tbody  class="text-center" id="displayrecipes" >
+                <tr>
+                    <td>This will hold recipe name</td>
+                    <td>Recipe instructions</td>
+                    <td> Cook time</td>
+                    <td> Image</td>
+                </tr>
+            </tbody>
+    </main>
+    
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
