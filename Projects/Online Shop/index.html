@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> 
+    @import url('https://fonts.googleapis.com/css?family=Lato:700|Josefin Sans:400');
+    
+
+    :root {
+        --text: #0b0f06;
+    --background: #f3efdf;
+    --primary: #465d22;
+    --secondary: #d7e6c1;
+    --accent: #769d3f;
+    }
+body {
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  background-color: #F3EFDF;
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lato';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 11.090rem; /* 177.44px */}
+
+h2 {font-size: 6.854rem; /* 109.6px */}
+
+h3 {font-size: 4.236rem; /* 67.84px */}
+
+h4 {font-size: 2.618rem; /* 41.92px */}
+
+h5 {font-size: 1.618rem; /* 25.92px */}
+
+small {font-size: 0.618rem; /* 9.92px */}
+    </style>
+</head>
+<body>
+    <!-- navbar here-->
+    <nav style="background-color: var(--accent);" >
+        <div class="flex justify-between rounded border-2 border-black sticky px-8 py-4 top-0">
+            <!-- logo -->
+                <a href="index.html"><img src="assets/logo-removebg-preview.png" class="w-20"></a>
+                <!-- Primary Navigation and dropdown menu within a wrapper-->
+            <div id="wrapperfornav" class="flex justify-between">
+                <div  id="primarynav">
+                I am the Primary NAv</div>
+            <!-- Responsive dropdown menu -->
+                <div  id="dropdownmenu">
+                Its I drop down menu </div>
+            </div>
+        </div>
+
+
+    </nav>
+    <!-- content down here -->
+    
+</body>
+</html>
