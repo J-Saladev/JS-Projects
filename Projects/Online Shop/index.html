@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style> 
-    @import url('https://fonts.googleapis.com/css?family=Lato:700|Josefin Sans:400');
-    
-
-    :root {
-        --text: #0b0f06;
-    --background: #f3efdf;
-    --primary: #465d22;
-    --secondary: #d7e6c1;
-    --accent: #769d3f;
-    }
-body {
-  font-family: 'Josefin Sans';
-  font-weight: 400;
-  background-color: #F3EFDF;
-
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Lato';
-  font-weight: 700;
-}
-
-html {font-size: 100%;} /* 16px */
-
-h1 {font-size: 11.090rem; /* 177.44px */}
-
-h2 {font-size: 6.854rem; /* 109.6px */}
-
-h3 {font-size: 4.236rem; /* 67.84px */}
-
-h4 {font-size: 2.618rem; /* 41.92px */}
-
-h5 {font-size: 1.618rem; /* 25.92px */}
-
-small {font-size: 0.618rem; /* 9.92px */}
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: var(--background)">
     <!-- navbar here-->
-    <nav style="background-color: var(--accent);" >
-        <div class="flex justify-between rounded border-2 border-black sticky px-8 py-4 top-0">
-            <!-- logo -->
-                <a href="index.html"><img src="assets/logo-removebg-preview.png" class="w-20"></a>
-                <!-- Primary Navigation and dropdown menu within a wrapper-->
-            <div id="wrapperfornav" class="flex justify-between">
-                <div  id="primarynav">
-                I am the Primary NAv</div>
-            <!-- Responsive dropdown menu -->
-                <div  id="dropdownmenu">
-                Its I drop down menu </div>
-            </div>
+    <nav
+      id="shine-div"
+      class="shadow-lg opacity-90 sticky text-white top-0 w-full"
+    >
+      <div class="flex justify-between rounded px-8 py-4 items-center">
+        <!-- logo -->
+        <a href="index.html" class="flex"
+          ><img src="assets/logo-removebg-preview.png" class="w-14" />
+          <p class="ml-2 font-bold mt-3 text-2xl">Ferniture</p></a
+        >
+        <!-- Primary Navigation and dropdown menu within a wrapper-->
+        <div id="wrapperfornav" class="flex justify-between">
+          <div id="primarynav"></div>
+          <!-- Responsive dropdown menu -->
+          <div id="dropdownmenu">
+            <!-- This is the sidebar toggler -->
+            <svg
+              onhover=""
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
         </div>
-
-
+      </div>
     </nav>
+    <!-- sidebar here -->
+    <sidebar
+      style="background-color: var(--secondary)"
+      class="opacity-90 justify-between min-h-screen w-20 align-items-center fixed z-1 top-0 right-0"
+    >
+    </sidebar>
+
+    <!-- Empty div for protecting content from header -->
+    <div class="h-20"></div>
     <!-- content down here -->
-    
-</body>
+
+    <article class="w-full h-vh ml-52 mt-20 flex">              
+      <!--Title text with fade in -->
+      <div id="leftside" class="w-3/4">
+        <div id="fadein" style="color: var(--accent)">
+          <h1 class="text-9xl font-bold">Ferniture</h1>
+          <p class="text-8xl"  >For all your</p>
+          <p class="text-7xl">home <span class="font-bold">needs</span></p>
+        </div>
+        <p class="mt-3 p-2" id="fadein2" style="color: var(--primary)">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          <br>
+          sed do
+          eiusmod
+        
+          tempor incididunt ut labore et dolore magna aliqua. 
+          <br>
+          Sed nisi
+          lacus sed viverra tellus in hac habitasse. Lacus vestibulum sed arcu
+          non odio. Cras tincidunt lobortis feugiat vivamus at augue. Non quam
+          lacus suspendisse faucibus interdum posuere lorem.
+          <br>
+          Lorem ipsum dolor sit amet consectetur adipisicing 
+      </div>
+      <div>
+        <img id="slidein"
+          src="assets/funimage.jpg"
+          alt="hero"
+          class="w-1/3 relative left-1/2 -translate-x-1/2"
+        />
+      </div>
+    </article>
+  </body>
 </html>
