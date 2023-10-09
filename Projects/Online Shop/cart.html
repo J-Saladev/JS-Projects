@@ -195,57 +195,64 @@
     </form>
     <!-- Register modal here -->
     <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" id="registerModal" hidden>
-      <form id="registerForm">
-     
-      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-    
-      <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-         
-          <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-              <div class="sm:flex sm:items-start">
-                <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-                  </svg>
-                  
-                </div>
-                <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                  <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title"><button type="button" class="ml-2 border border-gray-300 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="modal-close" onclick="document.getElementById('registerModal').hidden=true; document.getElementById('loginModal').hidden=false">Login </button><button type="button" class="ml-2 border border-gray-300 rounded-md bg-green-100 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-green-50" id="modal-close" onclick="document.getElementById('registerModal').hidden=false; document.getElementById('loginModal').hidden=true" >Register</button></h3>
-                  <div class="mt-2 flex p-3">
-                    <div>
-                    <label for = "registerusername" class="block text-sm font-medium text-gray-700 mr-2">Username:</label>
-                    <input id ="registerusername" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-4" required></input>
-                    <label for = "registerpassword" class="block text-sm font-medium text-gray-700 mx-2">Password: </label>
-                    <input id="registerpassword" type="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-4"required></input>
-                    <input type="checkbox" name="admin" id="admincheck">Admin</input>
+        <form id="registerForm">
+       
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+      
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+           
+            <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+              <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                    </svg>
+                    
                   </div>
-                  
+                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title"><button type="button" class="ml-2 border border-gray-300 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="modal-close" onclick="document.getElementById('registerModal').hidden=true; document.getElementById('loginModal').hidden=false">Login </button><button type="button" class="ml-2 border border-gray-300 rounded-md bg-green-100 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-green-50" id="modal-close" onclick="document.getElementById('registerModal').hidden=false; document.getElementById('loginModal').hidden=true" >Register</button></h3>
+                    <div class="mt-2 flex p-3">
+                      <div>
+                      <label for = "registerusername" class="block text-sm font-medium text-gray-700 mr-2">Username:</label>
+                      <input id ="registerusername" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-4" required></input>
+                      <label for = "registerpassword" class="block text-sm font-medium text-gray-700 mx-2">Password: </label>
+                      <input id="registerpassword" type="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-4"required></input>
+                      <input type="checkbox" name="admin" id="admincheck">Admin</input>
+                    </div>
+                    
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-              <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto" id="loginbutton" type ="submit" onclick="registerUser(event)">Login</button>
-              <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" id="modal-close" onclick="document.getElementById('loginModal').hidden=true">Cancel</button>
+              <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto" id="loginbutton" type ="submit" onclick="registerUser(event)">Login</button>
+                <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" id="modal-close" onclick="document.getElementById('loginModal').hidden=true">Cancel</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </form>
+      </form>
       <!-- Empty div for protecting content from header -->
       <div class="h-20"></div>
       <h1 class="text-4xl font-bold text-center">Products</h1>
       <section class="mt-2 flex p-3  h-auto overflow-x-wrap">
-        <ul id="productslistdisplay" class="scroller_inner" >
-          
-            
+        <ul id="cartdisplay" class="scroller_inner" >
+          <p class="text-4xl font-bold text-center">No Products Currently</p>
             
               
           </ul>
       </section>
+      <section class="mt-2 text-center p-3  h-auto overflow-x-wrap">
+        <h1 class="text-4xl font-bold text-center">Cart Total <span id="totalprice"></span></h1>
+
+        <button class="border border-white rounded p-3 ml-1/2 text-white justify-center mt-3" style="background-color: var(--accent);" id="checkout" onclick="checkout()">Checkout</button>
+
+        <button class="border border-white rounded p-3 ml-1/2 text-white justify-center" style="background-color: red;" id="clear" onclick="clearCart()">Clear Cart</button>
+      </section>
+      
       <div class="h-48  text-center p-2 absolute bottom-0 w-screen" style="background-color: var(--accent);">
         <p class="small">Copyright &copy; 2022</p>
         <p class="small">All rights reserved</p>
@@ -254,6 +261,6 @@
     
     
       <script src="header.js"></script>
-      <script src="listproduct.js"></script>
+      <script src="cart.js"></script>
 </body>
 </html>

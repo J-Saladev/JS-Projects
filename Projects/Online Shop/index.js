@@ -28,6 +28,10 @@ onload = function () {
 function normaldisplay() {
   let products = JSON.parse(localStorage.getItem("products"));
   let linearanimation = document.querySelector(".scroller_inner");
+  if (!products) {
+    linearanimation.innerHTML = `<p class="text-center mt-3 small">No products added yet</p>`;
+    return;
+  }
   products.forEach((product) => {
     linearanimation.innerHTML += `<li id="">
         <div
@@ -55,22 +59,36 @@ function showSidebar() {
   
   
 function headerDisplay(){
-  console.log("Guest User");
+  let loggedin = JSON.parse(localStorage.getItem("loggedin"));
     let loginbutton = document.querySelector("#logInbutton");
     let addProduct = document.querySelector("#addProductbutton");
     let listProduct = document.querySelector("#listProductbutton");
     let logout = document.querySelector("#logOutbutton");
-  if (localStorage.getItem("loggedin")){
-    loginbutton.hidden = true;
-    addProduct.hidden = false;
-    listProduct.hidden = false;
-    logout.hidden = false;
+    let cart = JSON.parse(localStorage.getItem("userCart")) || [];
+    if (cart.length > 0) {
+    let cartlength = cart.length;
+    document.getElementById("cart-count").innerHTML = cartlength;
+  }
+   
+  if (loggedin){
+
+    loginbutton.style.display = "none";
+
+    let admincheck = loggedin.admin? "admin" : "user";
+
+    if (admincheck == "user"){
+      console.log("athis is a user");
+      addProduct.style.display = "none";
+      listProduct.style.display = "none";
+     
+    } 
+    
   } else
   {
-    loginbutton.hidden = false;
-    addProduct.hidden = true;
-    listProduct.hidden = true;
-    logout.hidden = true;
+    
+    addProduct.style.display = "none";
+    listProduct.style.display = "none";
+    logout.style.display = "none";
   }
 }
  function logIn(){
@@ -111,9 +129,22 @@ function registerUser(){
   let username = document.getElementById("registerusername").value;
   let password = document.getElementById("registerpassword").value;
   let users = JSON.parse(localStorage.getItem("users")) || [];
+  let admincheck = document.getElementById("admincheck").checked;
+  if (admincheck === true){
+    alert("Use password `password` to register as admin");
+    let adminpass = prompt("Enter admin password!");
+    if (adminpass === "password"){
+      admincheck = true;
+    }else {
+      alert("Wrong password!");
+      return;
+    }
+  }
+  let admin = admincheck ? `admin` : `user`;
   let user = {
     username,
     password,
+    admin,
   };
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
