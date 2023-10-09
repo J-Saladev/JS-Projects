@@ -8,11 +8,13 @@
     --primary: #465d22;
     --secondary: #d7e6c1;
     --accent: #769d3f;
+    scroll-behavior: smooth;
     }
 body {
   font-family: 'Josefin Sans';
   font-weight: 400;
   background-color: #F3EFDF;
+  overflow-x: hidden;
 
 }
 
@@ -124,4 +126,79 @@ z-index: 2;
 }
  
 
-    
+
+.scroller{
+  max-width: 1200px;
+  margin: auto;
+  
+
+}
+
+.scroller_inner {
+padding-block: 2rem;
+flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.scroller[data-animated = true]{
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+.scroller[data-animated = true] .scroller_inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(-100%);
+  }
+}
+
+
+
+@keyframes open {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+@keyframes close {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 0%;
+    visibility: hidden;
+  }
+  
+}
+
+.openbar {
+  animation : open 1s;
+  background-color: var(--accent);
+  width: 20%;
+  
+}
+.closebar {
+  animation: close 1s;
+  background-color: var(--accent);
+  width: 0%;
+ 
+  
+  
+  
+}
+.navitembar{
+  
+  overflow-x: hidden;
+
+}
+
